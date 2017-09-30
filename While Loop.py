@@ -1,12 +1,17 @@
 #Zahlen von 1 bis 10
-from sys import *
-try:
-    a = int(input("kleinste Zahl: ")) 
+import sys
 
-    b = int(input("Höchste Zahl: "))
-except ValueError or NameError:
-    #print ("Der eingegebene Wert ist nicht nummerisch")
-    pass
+try:
+    a = input("kleinste Zahl: ") 
+    b = input("Höchste Zahl: ")
+
+    if type(a) != int or type(b) != int:
+      raise
+
+
+except:
+    print ("Der eingegebene Wert ist nicht nummerisch")
+    sys.exit()
   
   
 
