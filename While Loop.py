@@ -2,19 +2,17 @@
 import sys
 
 try:
-    a = input("kleinste Zahl: ") 
-    b = input("Höchste Zahl: ")
-
-    if type(a) != int or type(b) != int:
-      raise
+    a = int(input("kleinste Zahl: "))
+    b = int(input("Höchste Zahl: "))
+    
 
 
-except:
+except NameError:
     print ("Der eingegebene Wert ist nicht nummerisch")
     sys.exit()
   
   
 
-while a < 10:
+while a < b:
   a = a + 1
   print(a)
